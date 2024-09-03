@@ -1,0 +1,70 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: linear-gradient(45deg, #333, #555);
+    color: white;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+}
+
+.logo img {
+    width: 250px;
+    animation: float 6s ease-in-out infinite;
+}
+
+.animated-text .text-large, .animated-text .text-small {
+    display: block;
+    font-size: 2em;
+    animation: fadeInOut 10s linear infinite;
+}
+
+.x-button {
+    font-size: 2em;
+    padding: 20px;
+    border: none;
+    background-color: #000;
+    color: white;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.gif-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.responsive-gif {
+    width: 100px;
+    margin: 10px;
+    transition: transform 0.5s;
+}
+
+.responsive-gif:hover {
+    transform: scale(1.1);
+}
